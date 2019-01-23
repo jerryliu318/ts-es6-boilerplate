@@ -1,0 +1,16 @@
+{
+    // https://www.typescriptlang.org/docs/handbook/tsconfig-json.html
+    // https://www.typescriptlang.org/docs/handbook/compiler-options.html
+    "compilerOptions": {
+        "outDir": "./tsc2js",
+        "allowJs": true,
+        "target": "es6"
+    },
+    "include": [
+        "./src/**/*"
+    ],
+    "exclude": [
+        // no necessary here 
+        "node_modules"
+    ],
+}
