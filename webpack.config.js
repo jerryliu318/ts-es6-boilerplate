@@ -5,7 +5,7 @@ const nodeModulesPath = path.resolve(__dirname, 'node_modules');
 
 module.exports = {
     entry: {
-        basic: ["./src/basic.ts"]
+        basic: ["./src/basic.ts"],
     },
     output: {
         filename: '[name].bundle.js',
