@@ -35,7 +35,7 @@ const mySquare1 = createSquare({color: "black"}); // {color: "black"; area: 100}
 // const mySquare2 = createSquare({}); // {color: "white"; area: 100}
 // const mySquare3 = createSquare("123"); // error
 // const mySquare4 = createSquare({color: "black", test: "123"}); // Excess Property Checkes
-// const mySquare5 = createSquare({color: "black", test: "123"} as SquareConfig);
+// const mySquare5 = createSquare({} as SquareConfig);
 
 // ========================
 

@@ -6,7 +6,7 @@ export interface LabelValue {
 export interface SquareConfig {
     color?: string;
     width?: number;
-    [propName: string]: any; // index signatures
+    // [propName: string]: any; // index signatures
 }
 
 export enum Color {Red, Green, Blue}

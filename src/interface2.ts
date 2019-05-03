@@ -5,7 +5,7 @@ const createSquare = (config: SquareConfig): {color: string; area: number} => {
     const newSquare = {color: "white", area: 100};
     if (config.color) {
         newSquare.color = config.color;
-        // newSquare.color = config.clor; // OK
+        newSquare.color = config.area; // OK
     }
     if (config.width) {
         newSquare.area = config.width * config.width;
@@ -29,14 +29,14 @@ mySearch = (source: string, subString: string) => {
     const result = source.search(subString);
     return result > -1;
 };
-// mySearch = (src: string, sub: string): boolean => {
-//     const result = src.search(sub);
-//     return result > -1;
-// };
-// mySearch = (src, sub) => {
-//     const result = src.search(sub);
-//     return result > -1;
-// };
+mySearch = (src: string, sub: string): boolean => {
+    const result = src.search(sub);
+    return result > -1;
+};
+mySearch = (src, sub) => {
+    const result = src.search(sub);
+    return result > -1;
+};
 
 // ========================
 
@@ -47,8 +47,9 @@ interface StringArray1 {
 }
 let strArray1: StringArray1;
 strArray1 = ["Bob", "Fred"];
-// myArray = {0: "123", 1: "456"};
-// myArray = [1, "Fred"]; // error
+console.log(strArray1[0]);
+// strArray1 = {10: "123", 100: "456"};
+// strArray1 = [1, "Fred"]; // error
 const myStr1: string = strArray1[1];
 
 interface StringArray2 {
@@ -58,11 +59,11 @@ const myArray2: StringArray2 = {name1: "Bob", name2: "Fred"};
 const myStr2: string = myArray2.name1;
 // const unknow: string = myArray2.unknow; // OK
 
-// interface NumberDictionary {
-//     [index: string]: number;
-//     length: number;    // ok, length is a number
-//     name: string;      // error, the type of 'name' is not a subtype of the indexer
-// }
+interface NumberDictionary {
+    [index: string]: number|string;
+    length: number;    // ok, length is a number
+    name: string;      // error, the type of 'name' is not a subtype of the indexer
+}
 
 interface ReadonlyStringArray {
     readonly [index: number]: string;

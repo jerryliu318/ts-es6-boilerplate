@@ -3,7 +3,7 @@
 
 interface ClockInterface {
     currentTime: Date;
-    setTime(d: Date);
+    setTime(d: Date): void;
 }
 
 // This is because when a class implements an interface,
@@ -66,7 +66,8 @@ interface Square extends Shape, PenStroke {
     sideLength: number;
 }
 
-const square = {} as Square;
+// const square = {} as Square;
+const square: Square = {color: "123", penWidth: 123, sideLength: 123};
 square.color = "blue";
 square.sideLength = 10;
 square.penWidth = 5.0;
@@ -90,9 +91,9 @@ class TextBox extends Control {
     public select() { }
 }
 
-// class Image implements SelectableControl {
-//     public select() { }
-// }
+class Image implements SelectableControl {
+    public select() { }
+}
 
 // https://stackoverflow.com/questions/40900791/cannot-redeclare-block-scoped-variable-in-unrelated-files
 export {};
